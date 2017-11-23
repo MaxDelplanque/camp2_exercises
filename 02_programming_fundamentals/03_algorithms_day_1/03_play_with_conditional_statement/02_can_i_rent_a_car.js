@@ -1,4 +1,5 @@
 // Do not pay attention to this line for the moment
+// eslint-disable-next-line
 const driverData = require('./.driver_data');
 
 // These are the variables against which you should test
@@ -14,6 +15,20 @@ const bonus = driverData.bonus;
 // Assign a boolean to this variable:
 //   `true` if the driver can rent a car
 //   `false` if not
-let canRentACar;
+let canRentACar = false;
 
 // Your code here:
+const conductorA = {
+  name: "Max",
+  licence: driverLicense,
+  licenceYear: licenceIssued,
+  accidentsCount: numberOfAccident,
+  bonus: bonus
+};
+
+if (
+  (conductorA.licence === "B" || conductorA.licence === "B1")
+  && conductorA.licenceYear <= 2015
+  && (conductorA.accidentsCount = 0 || conductorA.bonus >= 0.7)) {
+  canRentACar = true;
+}

@@ -1,5 +1,4 @@
 // > Frieda and Francis walk on the street. Frieda is 22 and Francis is 17.
-//
 // Create two objects, `francis`, `frieda` with the fields :
 //   `age` (an integer) and `name`, (obviously a string)
 
@@ -14,3 +13,20 @@
 // it is expected to see failures for these tests:
 // "Frieda|Francis should be inside an object frieda|francis".
 // All the other tests should work.
+
+const francis = {age: 17, name: "Francis"};
+const frieda = {age: 22, name: "Frieda"};
+
+let canFriedaDrinkAlcohol = true;
+if (frieda.age >= 18) {
+  canFriedaDrinkAlcohol= true;
+} else {
+  canFriedaDrinkAlcohol= false;
+}
+
+let canFrancisDrinkAlcohol = true;
+if (francis.age >= 18) {
+  canFrancisDrinkAlcohol= true;
+} else {
+  canFrancisDrinkAlcohol= false;
+}
