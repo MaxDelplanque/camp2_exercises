@@ -17,16 +17,18 @@
 const francis = {age: 17, name: "Francis"};
 const frieda = {age: 22, name: "Frieda"};
 
-let canFriedaDrinkAlcohol = true;
+let canFriedaDrinkAlcohol;
 if (frieda.age >= 18) {
   canFriedaDrinkAlcohol= true;
 } else {
   canFriedaDrinkAlcohol= false;
 }
 
-let canFrancisDrinkAlcohol = true;
+let canFrancisDrinkAlcohol = false;
 if (francis.age >= 18) {
   canFrancisDrinkAlcohol= true;
-} else {
-  canFrancisDrinkAlcohol= false;
 }
+//let canFrancisDrinkAlcohol = true;
+//if (francis.age < 18) {
+//canFrancisDrinkAlcohol= false;
+//}
