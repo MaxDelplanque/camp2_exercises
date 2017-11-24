@@ -10,6 +10,7 @@
 
 function fizzBuzz(list) {
   const newList = [];
+
   for (let i = 0; i < list.length; i++) {
     if (list[i] % 3 === 0 && list[i] % 5 === 0) {
       newList[i] = "FizzBuzz";
@@ -21,8 +22,11 @@ function fizzBuzz(list) {
       newList[i] = list[i];
     }
   }
+
   return newList;
 }
+
+
 
 // function range(startNumber, endNumber) {
 //   const array = [];
