@@ -28,7 +28,11 @@ let canFrancisDrinkAlcohol = false;
 if (francis.age >= 18) {
   canFrancisDrinkAlcohol= true;
 }
+//autre possibilité
 //let canFrancisDrinkAlcohol = true;
 //if (francis.age < 18) {
 //canFrancisDrinkAlcohol= false;
 //}
+
+//encore plus simple
+//const canFriedaDrinkAlcohol = frieda.age >= 18; 
