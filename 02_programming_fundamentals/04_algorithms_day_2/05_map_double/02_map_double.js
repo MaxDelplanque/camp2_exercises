@@ -10,7 +10,19 @@
 //
 // WARNING: You're not allowed to use `Array.map`!
 
-// Your code here...
+function double (number) {
+  return 2 * number;
+}
+
+function map (list, func) {
+  const newTab = [];
+  for (let i = 0; i < list.length; i++) {
+    newTab.push(func(list[i]));
+  }
+  return newTab;
+}
+
+map([1, 2, 3, 4], double);
 
 // Do not remove last lines, it is for tests
 // eslint-disable-next-line
