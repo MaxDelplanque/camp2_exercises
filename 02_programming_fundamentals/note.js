@@ -61,3 +61,23 @@ reader.question(
     )
   }
 );
+
+//---------------------------------------------------------------------------------------
+// Exemple de fonction qu'on appelle elle même :
+const readline = require('readline');
+
+const reader = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+function shouldBeFine(answer) {
+  if (answer === "fine") {
+    console.log("Great!");
+    reader.close();
+  } else {
+    reader.question("How are you, really?", shouldBeFine);
+  }
+}
+
+reader.question("How are you?", shouldBeFine);
