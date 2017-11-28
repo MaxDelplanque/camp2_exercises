@@ -54,7 +54,7 @@ reader.question(
     reader.question(
       "What's your age",
       function(age) {
-        console.log(`Bonjour ${name}, tu as ${age} ans.``);//on peut utiliser le name, car on est dans la fonction où name est présent
+        console.log(`Bonjour ${name}, tu as ${age} ans.`); //on peut utiliser le name, car on est dans la fonction où name est présent
 
         reader.close();
       }
