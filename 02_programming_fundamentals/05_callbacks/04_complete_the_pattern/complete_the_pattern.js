@@ -33,10 +33,16 @@
 // 1111111111111111111111
 // ```
 
-function pattern(size) {
-  // Your code here
+function pattern(size){
+  let returnedNumber = "";
+  for (let i=1; i<=size ;i++){
+    for (let j=1; j<=i; j++){
+      returnedNumber = returnedNumber+i;
+    }
+    returnedNumber = returnedNumber+"\n";
+  }
+  return returnedNumber.trim();
 }
-
 // Do not remove last lines, it is for tests
 // eslint-disable-next-line
 module.exports = pattern;
