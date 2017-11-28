@@ -28,7 +28,7 @@ function guessNumber(answer) {
     reader.close();
   } else if (!Number.isInteger(integeranswer)) {
     reader.question("This was not a number\n", guessNumber);
-  } else if (integeranswer <= 0 || integeranswer > 100) {
+  } else if (integeranswer < 1 || integeranswer > 100) {
     reader.question("The number is between 1 and 100\n", guessNumber);
   } else if (integeranswer < mysteryNumber ) {
     reader.question("Too low\n", guessNumber);

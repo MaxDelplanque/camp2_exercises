@@ -19,14 +19,14 @@ function guessNumber(answer) {
   counter = counter +1;
   if (integeranswer === mysteryNumber) {
     if (counter === 1) {
-      console.log("You are the best, you find direcly the good number!");
+      console.log("You are the best, you found direcly the good number!");
     } else {
-      console.log("You won in " + counter + " steps!");  
+      console.log("You won in " + counter + " steps!");
     }
     reader.close();
   } else if (!Number.isInteger(integeranswer)) {
     reader.question("This was not a number\n", guessNumber);
-  } else if (integeranswer <= 0 || integeranswer > 100) {
+  } else if (integeranswer < 1 || integeranswer > 100) {
     reader.question("The number is between 1 and 100\n", guessNumber);
   } else if (integeranswer < mysteryNumber ) {
     reader.question("Too low\n", guessNumber);
