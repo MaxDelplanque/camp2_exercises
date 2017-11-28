@@ -18,13 +18,8 @@ const reader = readline.createInterface({
   output: process.stdout
 });
 
-// Fonction qui génère un nombre entre 1 et 100 :
-// function mysteryNumber () {
-//   return Math.floor(Math.random() * 101);
-// }
-
 const mysteryNumber = Math.floor(Math.random() * 101);
-console.log(mysteryNumber);
+//console.log(mysteryNumber);
 
 function guessNumber(answer) {
   const integeranswer = parseInt(answer, 10);
