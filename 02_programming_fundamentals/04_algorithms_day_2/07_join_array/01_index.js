@@ -4,6 +4,14 @@
 //
 // eg: join(["zero", "one", "two"], "-") => "zero - one - two"
 
+function joinArray(list,str) {
+  return list.reduce(
+    function(stringSuite, element) {
+      return stringSuite + str + element;
+    });
+}
+
+joinArray(["zero", "one", "two"], "-");
 
 // ⚠ Do not remove me ! It's for tests
 // eslint-disable-next-line
