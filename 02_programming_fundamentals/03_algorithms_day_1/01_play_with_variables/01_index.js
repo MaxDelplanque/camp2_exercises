@@ -15,7 +15,8 @@ const promo = {
   year: currentYear,
   kind: hello
 };
-// a constant called `promoYear`, bound to the value of the field `year` of the object `promo`;
+// a constant called `promoYear`, bound to the value of the field
+//`year` of the object `promo`;
 const promoYear = promo.year;
 // a constant called `digits`, bound to an array from zero to nine.
-const digits = [0,1,2,3,4,5,6,7,8,9];
+const digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];

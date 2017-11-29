@@ -16,19 +16,29 @@ const bonus = driverData.bonus;
 //   `true` if the driver can rent a car
 //   `false` if not
 let canRentACar = false;
-
-// Your code here:
-const conductorA = {
-  name: "Max",
-  licence: driverLicense,
-  licenceYear: licenceIssued,
-  accidentsCount: numberOfAccident,
-  bonus: bonus
-};
-
 if (
-  (conductorA.licence === "B" || conductorA.licence === "B1")
-  && conductorA.licenceYear <= 2015
-  && (conductorA.accidentsCount = 0 || conductorA.bonus >= 0.7)) {
+  (driverLicense === "B" || driverLicense === "B1")
+  && licenceIssued <= 2015
+  && (numberOfAccident === 0 || bonus >= 0.7)
+) {
   canRentACar = true;
 }
+// pour vérifierconsole.log(canRentACar);
+
+
+// 2ème méthode:
+// let canRentACar = false;
+// const conductorA = {
+//   name: "Max",
+//   licence: driverLicense,
+//   licenceYear: licenceIssued,
+//   accidentsCount: numberOfAccident,
+//   bonus: bonus
+// };
+//
+// if (
+//   (conductorA.licence === "B" || conductorA.licence === "B1")
+//   && conductorA.licenceYear <= 2015
+//   && (conductorA.accidentsCount = 0 || conductorA.bonus >= 0.7)) {
+//   canRentACar = true;
+// }
