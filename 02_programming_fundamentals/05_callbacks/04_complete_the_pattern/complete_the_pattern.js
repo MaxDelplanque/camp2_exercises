@@ -42,10 +42,11 @@ function pattern(size){
     }
     returnedNumber = returnedNumber+"\n";
   }
-  return returnedNumber.trim();
+  return returnedNumber.trim(); //permet de retirer l'espace blanc à la fin
 
 }
 
+console.log(pattern(5));
 //La méthode trim() permet de retirer les blancs en début et
 //fin de chaîne. Les blancs considérés sont les caractères d'espacement
 // (espace, tabulation, espace insécable, etc.) ainsi que les caractères
