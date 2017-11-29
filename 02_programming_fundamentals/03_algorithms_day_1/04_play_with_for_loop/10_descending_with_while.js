@@ -1,8 +1,9 @@
 // ## Decreasing Iteration on arrays using while
 //
-// -  Using `length`, write on `stdout` each values of the `litteralDigits` array, descending.
+// -  Using `length`, write on `stdout` each values of the
+// `litteralDigits` array, descending.
 
-const litteralDigits = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+const litteralDigits = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
 
 let i = 9;
 while (i < litteralDigits.length && i >= 0) {
