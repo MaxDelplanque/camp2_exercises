@@ -1,4 +1,5 @@
-// You have to write a function pattern which returns the following Pattern(See Pattern & Examples) up to n number of rows.
+// You have to write a function pattern which returns
+//the following Pattern(See Pattern & Examples) up to n number of rows.
 //
 // *Note: Returning the pattern is not the same as Printing the pattern.*
 //
@@ -42,7 +43,14 @@ function pattern(size){
     returnedNumber = returnedNumber+"\n";
   }
   return returnedNumber.trim();
+
 }
+
+//La méthode trim() permet de retirer les blancs en début et
+//fin de chaîne. Les blancs considérés sont les caractères d'espacement
+// (espace, tabulation, espace insécable, etc.) ainsi que les caractères
+//de fin de ligne (LF, CR, etc.).
+
 // Do not remove last lines, it is for tests
 // eslint-disable-next-line
 module.exports = pattern;
