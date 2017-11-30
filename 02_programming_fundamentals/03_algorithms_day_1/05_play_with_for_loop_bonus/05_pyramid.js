@@ -29,6 +29,16 @@ for (let i = str.length; i >= 0; i--) {
   }
 }
 
+//La méthode repeat() construit et renvoie une nouvelle chaine de caractères
+//qui contient le nombre de copie demandée de la chaine de caractères sur
+//laquelle la méthode a été appelée, concaténées les unes aux autres.
+
+//La méthode slice() renvoie un objet tableau, contenant une copie
+//superficielle (shallow copy) d'une portion du tableau d'origine,
+//la portion est définie par un indice de début et un indice de fin (exclus).
+//Le tableau original ne sera pas modifié.
+
+
 // // Dom :
 // // const array = [” “,” “,” “,”*“,” “,” “,” “,];
 // // const size = 4;
@@ -38,6 +48,8 @@ for (let i = str.length; i >= 0; i--) {
 //   console.log(array.join(“”)); // 1 seul passage init pyramide
 //   for (let i = 0; i < size-1; i++) { // boucle sous la pyramide
 //     array[Math.trunc(middle)-i]=“*”;
+////La fonction Math.trunc() retourne la partie entière d'un nombre
+////en retirant la partie décimale.
 //     array[Math.trunc(middle)+(2)+i]=“*”;
 //     console.log(array.join(“”));
 //   }
