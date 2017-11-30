@@ -1,4 +1,5 @@
-// Add a function `introduceMyself` which takes no arguments and return a little introductory sentence
+// Add a function `introduceMyself` which takes no arguments and
+// return a little introductory sentence
 //
 // Example
 //
@@ -11,8 +12,9 @@ const person = {
     return `${this.firstname} ${this.lastname}`;
   },
   introduceMyself: function() {
-    // Your code here
+    return `Hello! I'm ${this.fullname()} and I'm ${this.age}`;
   }
 }
+console.log(person.introduceMyself());
 
 module.exports = person;

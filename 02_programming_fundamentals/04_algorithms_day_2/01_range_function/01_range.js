@@ -1,5 +1,5 @@
-// Write a function that takes two input parameters, and returns a new array with defaults values between the start
-// number and the end number.
+// Write a function that takes two input parameters, and returns a new array
+// with defaults values between the start number and the end number.
 //
 // This function should work in both ascending or descending order.
 
