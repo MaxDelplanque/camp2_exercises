@@ -43,7 +43,6 @@ const orangeTree = {
   age: 0,
   oranges: 0,
   alive: false,
-
   seed: function() {
     this.height = 0;
     this.age = 0;
@@ -56,7 +55,14 @@ const orangeTree = {
       this.age += 1;
       this.growing();
       this.produceOrange();
+      this.isTreeAlive();
     } else {
+      this.alive = false;
+    }
+  },
+  isTreeAlive: function(){
+    let randomAge = (Math.floor((100-this.age)*Math.random())+this.age);// floor prend la partie entière du nombre
+    if (this.age >=50 && this.age === randomAge){
       this.alive = false;
     }
   },
@@ -87,8 +93,5 @@ const orangeTree = {
     }
   },
 };
-
-
-
 
 module.exports = orangeTree;
