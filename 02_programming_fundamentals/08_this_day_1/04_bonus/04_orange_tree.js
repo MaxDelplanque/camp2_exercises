@@ -61,10 +61,13 @@ const orangeTree = {
     }
   },
   isTreeAlive: function(){
-    let randomAge = (Math.floor((100-this.age)*Math.random())+this.age);// floor prend la partie entière du nombre
-    if (this.age >=50 && this.age === randomAge){
+    if(this.age >= 50 && Math.random() > 0.5) {
       this.alive = false;
     }
+    // let randomAge = (Math.floor((100-this.age)*Math.random())+this.age);// floor prend la partie entière du nombre
+    // if (this.age >=50 && this.age === randomAge){
+    //   this.alive = false;
+    // }
   },
   growing: function() {
     if (this.age < 10) {
