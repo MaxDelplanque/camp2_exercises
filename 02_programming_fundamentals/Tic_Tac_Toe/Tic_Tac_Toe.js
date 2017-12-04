@@ -1,3 +1,4 @@
+// Creation d'un Stream :
 const readline = require("readline");
 
 const reader = readline.createInterface({
@@ -5,6 +6,7 @@ const reader = readline.createInterface({
   output: process.stdout
 });
 
+// Toutes les combi gagnantes :
 const WINNING_COORDINATES = [
   [{letter: "a", digit: "0"}, {letter: "a", digit: "1"}, {letter: "a", digit: "2"}],
   [{letter: "b", digit: "0"}, {letter: "b", digit: "1"}, {letter: "b", digit: "2"}],
@@ -16,11 +18,19 @@ const WINNING_COORDINATES = [
   [{letter: "a", digit: "2"}, {letter: "b", digit: "2"}, {letter: "c", digit: "2"}]
 ];
 
+// Code pour le "Display a Grid and initialize state"
 const state = {
   a: Array(3).fill(null),
   b: Array(3).fill(null),
   c: Array(3).fill(null)
 };
+
+// methode .fill() : remplit tous les éléments d'un tableau entre
+//                   deux index avec une valeur statique.
+
+// null: La valeur null est un littéral JavaScript représentant la nullité
+// au sens où aucune valeur pour l'objet n'est présente.
+// C'est une des valeurs primitives de JavaScript.
 
 let currentPlayer;
 
@@ -81,10 +91,12 @@ function playTurn() {
 
 function start() {
   currentPlayer = ["X", "O"][Math.round(Math.random())];
-
+////La fonction Math.round() retourne la valeur d'un nombre arrondi à
+// l'entier le plus proche.
   playTurn();
 }
 
+//on crée une fonction qui va afficher une cellule avec un contenu défini:
 function renderCell(cell) {
   if (cell === null) {
     return "_";
@@ -95,6 +107,7 @@ function renderCell(cell) {
 
 function renderRow(letter) {
   const cells = state[letter];
+   //va chercher la valeur de la clé letter dans l'objet
 
   const row = cells.map(renderCell).join(" | ");
 
@@ -114,6 +127,12 @@ function renderBoard() {
 function flattenArray(arrayOfArray) {
   return arrayOfArray.reduce((newArray, array) => newArray.concat(array), [])
 }
+// .reduce : applique une fonction qui est un « accumulateur » et qui
+//  traite chaque valeur d'une liste (de la gauche vers la droite)
+//  afin de la réduire à une seule valeur.
+// .concat : est utilisée afin de fusionner un ou plusieurs tableaux en
+// les concaténant. Cette méthode ne modifie pas les tableaux existants,
+// elle renvoie un nouveau tableau qui est le résultat de l'opération.
 
 function gameIsFinished() {
   const allValues = flattenArray(Object.values(state));
@@ -132,6 +151,8 @@ function hasWinner() {
   }
 
   return WINNING_COORDINATES.some(isWinningLine);
+  // .some: La méthode some() teste si au moins un élément du tableau
+  // passe le test implémenté par la fonction fournie.
 }
 
 function isNotNull(value) {
