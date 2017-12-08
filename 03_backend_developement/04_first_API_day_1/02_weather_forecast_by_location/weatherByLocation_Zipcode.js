@@ -13,22 +13,22 @@ function weatherByZipcode(zipcode,countryCode) {
     function(error, response, result) {
       const json = JSON.parse(result);
       console.log(json);
-      // console.log(json.list.map(function(element) {
-      //   const date = new Date(element.dt*1000);//en milliseconde, donc *1000
-      //   const YYYY = date.getFullYear();
-      //   const mm = date.getMonth() + 1;
-      //   const dd = date.getDate();
-      //   const fullDate = dd + "/" + mm + "/" + YYYY ;
-      //   return {
-      //     date: fullDate,
-      //     temperature: element.main["temp"],
-      //     weather: {
-      //       id:element.weather[0]["id"],
-      //       main:element.weather[0]["main"],
-      //       description:element.weather[0]["description"]
-      //     }
-      //   };
-      // }));
+      console.log(json.list.map(function(element) {
+        const date = new Date(element.dt*1000);//en milliseconde, donc *1000
+        const YYYY = date.getFullYear();
+        const mm = date.getMonth() + 1;
+        const dd = date.getDate();
+        const fullDate = dd + "/" + mm + "/" + YYYY ;
+        return {
+          date: fullDate,
+          temperature: element.main["temp"],
+          weather: {
+            id:element.weather[0]["id"],
+            main:element.weather[0]["main"],
+            description:element.weather[0]["description"]
+          }
+        };
+      }));
     }
   );
 }
