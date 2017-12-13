@@ -211,5 +211,13 @@ FROM jobs j
 INNER JOIN job_history h ON j.id = h.job_id
 INNER JOIN employees e ON h.employee_id = e.id
 INNER JOIN departments d ON e.manager_id = d.id
-WHERE h.start_date >= '1993-01-01' AND h.end_date <= '1997-08-31';
+WHERE h.start_date >= '1993-01-01'AND h.end_date <= '1997-08-31'
+;
+
+SELECT title, name, first_name || ' ' || last_name AS Employee_name, start_date
+    FROM job_history
+        JOIN jobs USING (id)
+            JOIN departments USING (id)
+                JOIN  employees USING (id)
+                    WHERE start_date>='1993-01-01' AND start_date<='1997-08-31';
 
