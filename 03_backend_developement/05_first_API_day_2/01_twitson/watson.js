@@ -1,7 +1,7 @@
 const request = require("request");
 
 const username = process.env.WATSON_USERNAME;
-const password = process.env.WATSON_KEY;
+const password = process.env.WATSON_PASSWORD;
 const url = process.env.WATSON_URL;
 const auth = "Basic " + new Buffer(username + ":" + password).toString("base64");
 

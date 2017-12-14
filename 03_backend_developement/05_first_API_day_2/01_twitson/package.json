@@ -2,16 +2,14 @@
   "name": "01_twitson",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "exo_with_watson.js",
   "scripts": {
     "test": "jest"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "jest": "^21.2.1"
-  },
   "dependencies": {
-    "oauth": "^0.9.15"
+    "oauth": "^0.9.15",
+    "request": "^2.83.0"
   }
 }

@@ -1,0 +1,17 @@
+{
+  "name": "08_09_commerce_api_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "pg": "^7.4.0",
+    "request": "^2.83.0"
+  }
+}

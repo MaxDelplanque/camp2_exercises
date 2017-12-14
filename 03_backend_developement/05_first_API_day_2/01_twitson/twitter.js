@@ -13,15 +13,16 @@ const oauth = new OAuth.OAuth(
 const url = "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=";
 
 // Again, replace string by your credentials.
-function tweetTextByName(name,callback) {
+function tweetTextByName(name, callback) {
   return oauth.get(
-    url + "JohnnySjh",
+    url + name,
     process.env.TWITTER_ACCESS_TOKEN,
     process.env.TWITTER_ACCESS_SECRET,
     function (error, data) {
       if (error) {
         console.log(error);
       } else {
+        //console.log(JSON.parse(data)[0]);
         const texts = JSON.parse(data).map(function(tweet) {
           return tweet.text;
         });
@@ -29,5 +30,7 @@ function tweetTextByName(name,callback) {
       }
     });
 }
+
+tweetTextByName("JohnnySjh");
 
 module.exports = tweetTextByName;

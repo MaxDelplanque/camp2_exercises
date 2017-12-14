@@ -16,8 +16,7 @@ function weatherByCity(cityName,countryCode) {
     },
     function(error, response, result) {
       const json = JSON.parse(result);
-      //console.log(json.main.temp);
-      return `${json.main.temp} °C`;
+      console.log(`${json.main.temp}°C`);
     }
   );
 }

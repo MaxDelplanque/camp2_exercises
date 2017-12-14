@@ -8,6 +8,14 @@ function weatherByLatitudeAndLongitude(latitude, longitude, callback) {
   });
 }
 
+//autre façon de l'écrire :
+// function biloute (json, callback) {
+//   callback(json.list.map(reformatForecast));
+// }
+// function weatherByLatitudeAndLongitude(latitude, longitude, callback) {
+//   fetchForecastsByLatitudeAndLongitude(latitude, longitude, (json) => biloute(json, callback));
+// }
+
 function fetchForecastsByLatitudeAndLongitude(latitude, longitude, callback) {
   request(
     {
@@ -36,7 +44,6 @@ function reformatForecast(forecast) {
 
 function timestampToDate(timestamp) {
   const date = new Date(timestamp * 1000);
-
   return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
 }
 
