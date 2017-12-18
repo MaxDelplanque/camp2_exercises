@@ -1,0 +1,27 @@
+.page {
+    width: 100%;
+    margin: auto;
+    front-size: 16 px;
+    front-family: sans-serif;
+}
+
+.info {
+  float: left;
+  background-color: red;
+  width: 70%;
+}
+
+.photo {
+  float: left;
+    width: 30%;
+    background-color: green;
+}
+
+.photo > img{
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+  margin-top: 15px;
+}
