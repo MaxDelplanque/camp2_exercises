@@ -27,8 +27,35 @@
     </div>
     <script src="./departments.js"></script>
     <script>
-      // Your code here
-      // the departments are accessible in a global variable named DEPARTMENTS
+    document.querySelector("ul").innerHTML = DEPARTMENTS.map((department) =>
+      `<li>${department}</li>`
+    ).join("");
+    //2ème méthode:
+    // for (let i = 0; i < DEPARTMENTS.length; i++) {
+    //   document.getElementById("department-list").innerHTML += "<li>"+DEPARTMENTS[i]+"</li>";
+    // }
+    //3ème méthode:
+    //   function transformDepartments() {
+    //   return DEPARTMENTS
+    //   .map((department) => `<li>${department}</li>`)
+    //   .join("");
+    // }
+    //
+    // function getDepartmentAsHTML() {
+    //   const element = document.querySelector("ul");
+    //   element.innerHTML = transformDepartments()
+    // }
+    //
+    // getDepartmentAsHTML();
+    // the departments are accessible in a global variable named DEPARTMENTS
     </script>
   </body>
 </html>
+
+<!--
+
+
+Using the HTML template given, transform the DEPARTMENTS array into a list inside the <ul> with the ID
+department-list.
+You will need document.querySelector(selector) which allows you to get an HTML node from it
+identifier (the same identifier as CSS). And you can use node.innerHTML = htmlText to update the content of an element. -->
