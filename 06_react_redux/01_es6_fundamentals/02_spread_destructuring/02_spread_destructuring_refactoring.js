@@ -1,8 +1,9 @@
-function go(options) {
+/* ==== ==== ==== ==== */
 
-  const {
+function go(options) {
+  let {
     speed = 4,
-    enable: { hyperdrive = true, frobnifier = true} = {}
+    enable: { hyperdrive = false, frobnifier = true} = {}
   } = options;
 
   console.log("speed=", speed, "hyperdrive:", hyperdrive, "frobnifier:", frobnifier);
@@ -10,7 +11,9 @@ function go(options) {
 
 go({ speed: 5 });
 
-function lastIndexOf(arr, elt, start = (arr.length -1)) {
+/* ==== ==== ==== ==== */
+
+function lastIndexOf(arr, elt, start = arr.length - 1) {
   for (let i = start - 1; i >= 0; i--) {
     if (arr[i] === elt) {
       return i;
@@ -22,10 +25,10 @@ function lastIndexOf(arr, elt, start = (arr.length -1)) {
 
 console.log(lastIndexOf([1, 2, 1, 2], 2));
 
+/* ==== ==== ==== ==== */
+
 function replace(array, from, to, elements) {
-  const tmpArray = [array.splice(from, to - from)];
-  tmpArray.splice(2, 0, 99);
-  return tmpArray;
+  array.splice(from, to - from, ...elements);
 }
 
 let testArray = [1, 2, 100, 100, 6];
@@ -33,14 +36,10 @@ replace(testArray, 2, 4, [3, 4, 5]);
 console.log(testArray);
 
 function copyReplace(array, from, to, elements) {
-  return array.slice(0, from).concat(elements).concat(array.slice(to));
+  const head = array.slice(0, from);
+  const tail = array.slice(to);
+
+  return [...head, ...elements, ...tail];
 }
 
 console.log(copyReplace([1, 2, 100, 200, 6], 2, 4, [3, 4, 5]));
-
-module.exports = {
-  go: go,
-  lastIndexOf: lastIndexOf,
-  replace: replace,
-  copyReplace: copyReplace
-};
