@@ -1,0 +1,28 @@
+.Table {
+  text-align: center;
+}
+
+.Table-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.Table-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.Table-title {
+  font-size: 1.5em;
+}
+
+.Table-intro {
+  font-size: large;
+}
+
+@keyframes Table-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
